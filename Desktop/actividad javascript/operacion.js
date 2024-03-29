@@ -83,7 +83,7 @@ function ladoCuadrado(){
     else{
         document.getElementById("lado").style.borderBottom = "";
         num1 = parseFloat(num1);
-        perim = num1+num1;
+        perim = num1+num1+num1+num1;
         area = num1**2;
         alert ("El valor del perimetro es: " + perim + "\nEl valor del area es: " + area);
     }
@@ -139,5 +139,99 @@ function promedioTresnumeros(){
         promedio = (n1+n2+n3)/3;
         alert("Su promedio de 3 numeros es: " + promedio);
 
+    }
+}
+function positivoNegativo(){
+    var numer1=document.getElementById("num1").value;
+
+    if (numer1.trim() === ""){
+        document.getElementById("num1").style.borderBottom = "2px solid red";
+        alert ("No valido, verifique el numero");
+    }
+    else if (numer1 > 0){
+        document.getElementById("num1").style.borderBottom = "";
+        alert ("El numero ingresado es positivo");
+    }
+    else if (numer1 < 0){
+        document.getElementById("num1").style.borderBottom = "";
+        alert ("El numero ingresado es negativo");  
+    }
+    else{
+        document.getElementById("num1").style.borderBottom = "";
+        alert ("El numero ingresado es neutro");
+    }
+}
+function mayorMenor(){
+    var num1=document.getElementById("nnum1").value;
+    var num2=document.getElementById("nnum2").value;
+
+    if (num1.trim() === ""){
+        document.getElementById("nnum1").style.borderBottom = "2px solid red";
+        alert ("No valido, verifique el primer numero")
+    }
+    else if (num2.trim() === ""){
+        document.getElementById("nnum2").style.borderBottom = "2px solid red";
+        alert ("No valido, verifique el segundo numero")
+    }
+    else if (num1 > num2){
+        document.getElementById("nnum1").style.borderBottom = "";
+        document.getElementById("nnum2").style.borderBottom = "";
+        alert ("El numero mayor es: " + num1 + "\nEl numero menor es: "+ num2);
+    }
+    else if (num2 > num1){
+        document.getElementById("nnum1").style.borderBottom = "";
+        document.getElementById("nnum2").style.borderBottom = "";
+        alert ("El numero mayor es: " + num2 + "\nEl numero menor es: "+ num1);
+    }
+    else{
+        document.getElementById("nnum1").style.borderBottom = "";
+        document.getElementById("nnum2").style.borderBottom = "";
+        alert ("Los numeros ingresados son iguales");
+    }
+}
+function tresMenorMayor() {
+    var n1 = document.getElementById("nnu1").value;
+    var n2 = document.getElementById("nnu2").value;
+    var n3 = document.getElementById("nnu3").value;
+
+    n1 = parseInt(n1);
+    n2 = parseInt(n2);
+    n3 = parseInt(n3);
+
+    if (isNaN(n1)) {
+        document.getElementById("nnu1").style.borderBottom = "2px solid red";
+        alert("Por favor, verifique el primer numero.");
+    }
+    else if (isNaN(n2)) {
+        document.getElementById("nnu2").style.borderBottom = "2px solid red";
+        alert("Por favor, verifique el segundo numero.");
+    }
+    else if (isNaN(n3)) {
+        document.getElementById("nnu3").style.borderBottom = "2px solid red";
+        alert("Por favor, verifique el tercer numero.");
+    }
+    else if (n1 <= 0){
+        document.getElementById("nnu1").style.borderBottom = "2px solid red";
+        alert("El primer numero solo acepta valores positivos.");
+    }
+    else if (n2 <= 0){
+        document.getElementById("nnu2").style.borderBottom = "2px solid red";
+        alert("El segundo numero solo acepta valores positivos.");
+    }
+    else if (n3 <= 0){
+        document.getElementById("nnu3").style.borderBottom = "2px solid red";
+        alert("El segundo numero solo acepta valores positivos.");
+    }
+    else if (n1 === n2 && n2 === n3){
+        alert("Los tres numeros son iguales.")
+    }
+    else {
+        document.getElementById("nnu1").style.borderBottom = "";
+        document.getElementById("nnu2").style.borderBottom = "";
+        document.getElementById("nnu3").style.borderBottom = "";
+        var mayor = Math.max(n1, n2, n3); //Math max es usada como funcion de numero mayor
+        var menor = Math.min(n1, n2, n3); //Math min es usada como funcion de numero menor
+        var medio = n1 + n2 + n3 - mayor - menor;
+        alert("El numero mayor es: " + mayor + "\nEl numero medio es: " + medio + "\nEl numero menor es: " + menor);
     }
 }

@@ -49,9 +49,9 @@
                           Condicionales
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><a class="dropdown-item" href="#" onclick="mostrarFormulario('positivoNegativo')">Numero positivo o negativo</a></li>
+                          <li><a class="dropdown-item" href="#" onclick="mostrarFormulario('mayorMenor')">Numero mayor o menor</a></li>
+                          <li><a class="dropdown-item" href="#" onclick="mostrarFormulario('tresMenorMayor')">Numero mayor y menor de 3 enteros positivos</a></li>
                         </ul>
                     </div>
                     <div class="dropdown p-3">
@@ -90,100 +90,148 @@
                 <button type="submit" class="btn btn-primary b1" onclick="calcularArea()">Calcular</button>
             </form>
         </section>
+
+
         <section id="sumaNumeros" style="display: none;">
             <h1>Suma de dos numeros</h1>
             <form>
-                <form>
-                    <div>
-                      <label for="n1" class="form-label">Digite un numero a sumar</label>
-                      <input type="number" class="form-control" id="n1" aria-describedby="emailHelp">
-                    </div>
-                    <div>
-                      <label for="n2" class="form-label">Digite otro numero a sumar</label>
-                      <input type="number" class="form-control" id="n2">
-                    </div>
-                    <button type="submit" class="btn btn-primary b1" onclick="sumaNumeros()">Calcular</button>
-                </form>
+              <div>
+                <label for="n1" class="form-label">Digite un numero a sumar</label>
+                <input type="number" class="form-control" id="n1" aria-describedby="emailHelp">
+              </div>
+              <div>
+                <label for="n2" class="form-label">Digite otro numero a sumar</label>
+                <input type="number" class="form-control" id="n2">
+              </div>
+              <button type="submit" class="btn btn-primary b1" onclick="sumaNumeros()">Calcular</button>
             </form>
         </section>
+
+
         <section id="elevadoCuadrado" style="display: none;">
             <h1>Numero elevado al Cuadrado</h1>
             <form>
-                <form>
-                    <div>
-                      <label for="nu1" class="form-label">Digite numero a elevar al cuadrado</label>
-                      <input type="number" class="form-control" id="nu1" aria-describedby="emailHelp">
-                    </div>
-                    <button type="submit" class="btn btn-primary b1" onclick="elevadoCuadrado()">Calcular</button>
-                </form>
+              <div>
+                <label for="nu1" class="form-label">Digite numero a elevar al cuadrado</label>
+                <input type="number" class="form-control" id="nu1" aria-describedby="emailHelp">
+              </div>
+              <button type="submit" class="btn btn-primary b1" onclick="elevadoCuadrado()">Calcular</button>
             </form>
         </section>
+
+
         <section id="euroDolar" style="display: none;">
           <h1>Convierta euros a dolares</h1>
           <form>
-              <form>
-                  <div>
-                    <label for="euro" class="form-label">Digite numero en euros a convertir a dolares</label>
-                    <input type="number" class="form-control" id="euro" aria-describedby="emailHelp">
-                  </div>
-                  <button type="submit" class="btn btn-primary b1" onclick="euroDolar()">Calcular</button>
-              </form>
+            <div>
+              <label for="euro" class="form-label">Digite numero en euros a convertir a dolares</label>
+              <input type="number" class="form-control" id="euro" aria-describedby="emailHelp">
+            </div>
+            <button type="submit" class="btn btn-primary b1" onclick="euroDolar()">Calcular</button> 
           </form>
       </section>
+
+
       <section id="ladoCuadrado" style="display: none;">
         <h1>Area y perimetro de un cuadrado</h1>
         <form>
-            <form>
-                <div>
-                  <label for="lado" class="form-label">Digite un lado del cuadrado para saber su perimetro y area</label>
-                  <input type="number" class="form-control" id="lado" aria-describedby="emailHelp">
-                </div>
-                <button type="submit" class="btn btn-primary b1" onclick="ladoCuadrado()">Calcular</button>
-            </form>
+          <div>
+            <label for="lado" class="form-label">Digite un lado del cuadrado para saber su perimetro y area</label>
+            <input type="number" class="form-control" id="lado" aria-describedby="emailHelp">
+          </div>
+          <button type="submit" class="btn btn-primary b1" onclick="ladoCuadrado()">Calcular</button>
         </form>
-    </section>
-    <section id="areavolumenCilindro" style="display: none;">
-      <h1>Area y volumen de un cilindro</h1>
-      <form>
-          <form>
-              <div>
-                <label for="altura" class="form-label">Digite la altura del cilindro</label>
-                <input type="number" class="form-control" id="altura" aria-describedby="emailHelp">
-              </div>
-              <div>
-                <label for="radio" class="form-label">Digite el radio del cilindro</label>
-                <input type="number" class="form-control" id="radio">
-              </div>
-              <button type="submit" class="btn btn-primary b1" onclick="areavolumenCilindro()">Calcular</button>
-          </form>
-      </form>
-    </section>
+      </section>
+
+
+      <section id="areavolumenCilindro" style="display: none;">
+        <h1>Area y volumen de un cilindro</h1>
+        <form>
+          <div>
+            <label for="altura" class="form-label">Digite la altura del cilindro</label>
+            <input type="number" class="form-control" id="altura" aria-describedby="emailHelp">
+          </div>
+          <div>
+            <label for="radio" class="form-label">Digite el radio del cilindro</label>
+            <input type="number" class="form-control" id="radio">
+          </div>
+          <button type="submit" class="btn btn-primary b1" onclick="areavolumenCilindro()">Calcular</button>
+        </form>
+      </section>
 
 
 
 
 
-    <section id="promedioTresnumeros" style="display: none;">
-      <h1>Promedio de 3 numeros</h1>
-      <form>
-          <form>
-              <div>
-                <label for="numer1" class="form-label">Digite el primer numero</label>
-                <input type="number" class="form-control" id="numer1" aria-describedby="emailHelp">
-              </div>
-              <div>
-                <label for="numer2" class="form-label">Digite el segundo numero</label>
-                <input type="number" class="form-control" id="numer2">
-              </div>
-              <div>
-                <label for="numer3" class="form-label">Digite el tercer numero</label>
-                <input type="number" class="form-control" id="numer3">
-              </div>
-              <button type="submit" class="btn btn-primary b1" onclick="promedioTresnumeros()">Calcular</button>
-          </form>
-      </form>
-    </section>
-    
-        <script src="operacion.js"></script>
+      <section id="promedioTresnumeros" style="display: none;">
+        <h1>Promedio de 3 numeros</h1>
+        <form>
+          <div>
+            <label for="numer1" class="form-label">Digite el primer numero</label>
+            <input type="number" class="form-control" id="numer1" aria-describedby="emailHelp">
+          </div>
+          <div>
+            <label for="numer2" class="form-label">Digite el segundo numero</label>
+            <input type="number" class="form-control" id="numer2">
+          </div>
+          <div>
+            <label for="numer3" class="form-label">Digite el tercer numero</label>
+            <input type="number" class="form-control" id="numer3">
+          </div>
+          <button type="submit" class="btn btn-primary b1" onclick="promedioTresnumeros()">Calcular</button>
+        </form>
+      </section>
+
+
+      <section id="positivoNegativo" style="display: none;">
+        <h1>Numero positivo o negativo</h1>
+        <form>
+          <div>
+            <label for="num1" class="form-label">Digite un numero el cual desee saber si es positivo o negativo</label>
+            <input type="number" class="form-control" id="num1" aria-describedby="emailHelp">
+          </div>
+          <button type="submit" class="btn btn-primary b1" onclick="positivoNegativo()">Calcular</button>
+        </form>
+      </section>
+
+
+      <section id="mayorMenor" style="display: none;">
+        <h1>Numero mayor o menor</h1>
+        <form>
+          <div>
+            <label for="nnum1" class="form-label">Digite el primer numero</label>
+            <input type="number" class="form-control" id="nnum1" aria-describedby="emailHelp">
+          </div>
+          <div>
+            <label for="nnum2" class="form-label">Digite el segundo numero</label>
+            <input type="number" class="form-control" id="nnum2">
+          </div>
+          <button type="submit" class="btn btn-primary b1" onclick="mayorMenor()">Calcular</button>
+        </form>
+      </section>
+      
+
+      <section id="tresMenorMayor" style="display: none;">
+        <h1>Mayor y menor de 3 enteros positivos</h1>
+        <form>
+          <div>
+            <label for="nnu1" class="form-label">Digite el primer numero</label>
+            <input type="number" class="form-control" id="nnu1" aria-describedby="emailHelp">
+          </div>
+          <div>
+            <label for="nnu2" class="form-label">Digite el segundo numero</label>
+            <input type="number" class="form-control" id="nnu2">
+          </div>
+          <div>
+            <label for="nnu3" class="form-label">Digite el tercer numero</label>
+            <input type="number" class="form-control" id="nnu3">
+          </div>
+          <button type="submit" class="btn btn-primary b1" onclick="tresMenorMayor()">Calcular</button>       
+        </form>
+      </section>
+
+
+
+      <script src="operacion.js"></script>
     </body>
 </html>
