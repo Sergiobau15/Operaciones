@@ -235,3 +235,140 @@ function tresMenorMayor() {
         alert("El numero mayor es: " + mayor + "\nEl numero medio es: " + medio + "\nEl numero menor es: " + menor);
     }
 }
+function sumaResta(){
+    var n1= document.getElementById("nn1").value;
+    var n2 = document.getElementById("nn2").value;
+
+    n1=parseFloat(n1);
+    n2=parseFloat(n2);
+
+    if (isNaN(n1)){
+        document.getElementById("nn1").style.borderBottom = "2px solid red";
+        alert("Por favor, verifique el primer numero.");
+    }
+    else if (isNaN(n2)) {
+        document.getElementById("nn2").style.borderBottom = "2px solid red";
+        alert("Por favor, verifique el segundo numero.");
+    }
+    else if (n1 < n2){
+        document.getElementById("nn1").style.borderBottom = "";
+        document.getElementById("nn2").style.borderBottom = "";
+        suma = (n1+n2);
+        alert("Al ser menor el numero A la suma es: "+ suma);
+    }
+    else{
+        document.getElementById("nn1").style.borderBottom = "";
+        document.getElementById("nn2").style.borderBottom = "";
+        resta = (n1-n2);
+        alert("Al ser mayor el numero A la resta es: "+ resta);
+    }
+}
+function cocienteResultado(){
+    var n1 = document.getElementById("nuu1").value;
+    var n2 = document.getElementById("nuu2").value;
+
+    n1=parseFloat(n1);
+    n2=parseFloat(n2);
+
+    if (isNaN(n1)){
+        document.getElementById("nuu1").style.borderBottom = "2px solid red";
+        alert("Por favor, verifique el primer numero.");
+    }
+    else if (isNaN(n2)) {
+        document.getElementById("nuu2").style.borderBottom = "2px solid red";
+        alert("Por favor, verifique el segundo numero.");
+    }
+    else{
+        document.getElementById("nuu1").style.borderBottom = "";
+        document.getElementById("nuu2").style.borderBottom = "";
+        division = (n1/n2);
+        alert("El resultado de la division (cociente) es: "+ division);
+    }
+}
+function sumaMultiplicacion(){
+    var n1 = document.getElementById("numero1").value;
+    var n2 = document.getElementById("numero2").value;
+    
+    n1=parseFloat(n1);
+    n2=parseFloat(n2);
+
+    if (isNaN(n1)){
+        document.getElementById("numero1").style.borderBottom = "2px solid red";
+        alert("Por favor, verifique el primer numero.");
+    }
+    else if (isNaN(n2)) {
+        document.getElementById("numero2").style.borderBottom = "2px solid red";
+        alert("Por favor, verifique el segundo numero.");
+    }
+    else if (n1<0 || n2<0){
+        document.getElementById("numero1").style.borderBottom = "";
+        document.getElementById("numero2").style.borderBottom = "";
+        sumita = (n1+n2);
+        alert("Al ser numero negativo, la suma es: "+ sumita);
+    }
+    else{
+        document.getElementById("numero1").style.borderBottom = "";
+        document.getElementById("numero2").style.borderBottom = "";
+        mul = (n1*n2);
+        alert("Al no tener numero negativo, la multiplicacion es: "+ mul);
+    }
+}
+function anoBiciesto(){
+    var n1 = document.getElementById("ano").value;
+
+    if(n1.trim() === ""){
+        document.getElementById("ano").style.borderBottom = "2px solid red";
+        alert("Por favor, verifique el dato del año.");
+    }
+    else if (n1 % 4 === 0 || n1 % 400 === 0){
+        document.getElementById("ano").style.borderBottom = "";
+        alert("Es año bisiesto");
+    }
+    else{
+        document.getElementById("ano").style.borderBottom = "";
+        alert("No es año biciesto")
+    }
+}
+
+
+function ciclo1() {
+    var resultado = ""; // Variable para almacenar los resultados
+
+    for (var i = 0; i <= 100; i++) {
+        if (i % 3 == 0) {
+            resultado = resultado + i + "\n"; 
+        }
+    }
+
+    alert(resultado); 
+}
+function ciclo2() {
+    var resultado = "";
+
+    for (var i = 1; i <= 100; i = i + 2) {
+        resultado = resultado + i + "\n"; 
+    }
+
+    alert(resultado); 
+}
+function ciclo3() {
+    var resultado = "";
+
+    for (var i = 2; i <= 100; i = i + 2) {
+        resultado = resultado + i + "\n"; 
+    }
+
+    alert(resultado); 
+}
+function ciclo4() {
+    for (var i = 1; i <= 30; i++) {
+        var cuadrado = i * i;
+        alert("El cuadrado de " + i + " es: " + cuadrado);
+    }
+}
+
+
+
+
+
+
